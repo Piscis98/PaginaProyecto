@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+:root{
+    --primary: #111b54;
+    --light: #ffffff;
+    --egrey: #efefef;
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem
+     }
+
+body{
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+    background-image: linear-gradient(to bottom, #141417, #1d1f2f, #242b49, #293765, #2a4482, #25468f, #1f479b, #1848a8, #153ca4, #1830a0, #1e219a, #260c93);
+}
+

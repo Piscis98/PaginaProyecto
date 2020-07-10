@@ -2,6 +2,15 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@imagenes/*": ["src/assets/Imagenes/*"],
+      "@page404/*": ["src/app/componentes/paginaerror/page404/*"],
+      "@menu/*": ["src/app/componentes/principal/menu/menu/*"],
+      "@footer/*": ["src/app/componentes/principal/footer/footer/*"],
+      "@home/*": ["src/app/componentes/principal/home/home/*"],
+      "@principal/*": ["src/app/componentes/principal/principal/principal/*"],
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

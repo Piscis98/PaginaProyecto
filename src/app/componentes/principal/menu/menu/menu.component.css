@@ -1,0 +1,61 @@
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+
+.bg{
+    background-color: rgb(72, 90, 170);
+}
+
+.bg-light{
+   /* background-color: var(--light) !important;*/
+    background-color: gold !important;
+}
+
+#sidebar-container{
+    min-height: 100vh;
+}
+#sidebar-container .logo{
+  padding: .875rem 1.25rem;
+
+}
+
+#sidebar-container .menu{
+    width: 15rem;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.btn-search{
+    right: 5px;
+}
+
+.rs{
+    display: block;
+    float: right;
+    line-height: 50px;
+    width: 160px;
+}
+
+.img{
+
+   border-radius: 100%;
+   box-shadow: 2px 3px 5px #000;
+   margin-left: 5px;
+   vertical-align: middle;
+   height: 40px;
+   width: 40px;
+
+}
+.menu a:hover{
+    background-color: #434343;
+    animation: 1s ms 1;
+}
+
+@keyframes ms{
+    0%{
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
