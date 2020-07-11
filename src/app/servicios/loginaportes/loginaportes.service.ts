@@ -28,7 +28,7 @@ export class LoginaportesService {
 */
   }
 
-  public isLogged : boolean = true;
+  public isLogged : boolean = false;
 
 
   onLoginGoogle() {

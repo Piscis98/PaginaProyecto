@@ -31,10 +31,10 @@ export class ChatComponent implements OnInit {
     });
   }
 
-  public isLogged : boolean = true;
+  public isLogged : boolean =this.loginaportesSevice.isLogged;
 
   ngOnInit(): void {
-    //this.loginaportesSevice.getCurrentUser();
+    this.loginaportesSevice.getCurrentUser();
   }
 
   enviar_mensaje(){
