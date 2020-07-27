@@ -1,6 +1,6 @@
 
 .content{
-    overflow: auto;
+    overflow: hidden;
     height: 72vh;
     padding-bottom: 0rem;
     padding-top: 0px;

@@ -13,6 +13,8 @@ export class PanelcontrolComponent implements OnInit {
 
   public usuario: any= {};
 
+  public isAdmin : boolean = true;
+
 
   constructor(public loginadministradorSevice: LoginadministradorService, public verificacionService: VerificacionLoginService) { }
 

@@ -9,12 +9,17 @@
                     <form id="login-form" class="form" action="" method="post" (submit)="onLogin()">
                         <h3 class="text-center text-info">Iniciar Sesión</h3>
                         <div class="form-group">
-                            <label for="username" class="text-info">Usuario:</label><br>
+                            <label for="username" class="text-info">
+                           <ion-icon name="person-circle-outline" class="mr-2 lead">
+                            </ion-icon>Usuario:</label><br>
                            <input [(ngModel)]="email"
                            type="email" name="username" id="username" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-info">Contraseña:</label><br>
+                            <label for="password" class="text-info">
+                              <ion-icon name="key-outline" class="mr-2 lead">
+                              </ion-icon>
+                              Contraseña:</label><br>
                             <input [(ngModel)]="pass"
                             type="password" name="password" id="password" class="form-control">
                         </div>

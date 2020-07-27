@@ -22,4 +22,17 @@ export class LoginComponent implements OnInit {
 
   }
 
+  onLoginFacebook(): void{
+    /* this.loginAportesService.onLoginGoogle().then((res)=> {
+      this.router.navigate(['/chat']);
+    }).catch(err=> console.log('err', err)); */
+
+  }
+  onLoginTwitter(): void{
+   /*  this.loginAportesService.onLoginGoogle().then((res)=> {
+      this.router.navigate(['/chat']);
+    }).catch(err=> console.log('err', err)); */
+
+  }
+
 }
