@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router} from '@angular/router';
 import {map} from 'rxjs/operators';
+import {LocalstorageService} from '../localstorage/localstorage.service';
 import { isNullOrUndefined } from 'util';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class LoginaportesService {
 
   public usuario: any= {};
 
-  constructor(public afAuth: AngularFireAuth, public router: Router) {
+  constructor(public afAuth: AngularFireAuth, public router: Router, public localStorage: LocalstorageService) {
 /*
     this.afAuth.authState.subscribe(user=> {
       console.log('Estado user: ', user);
@@ -28,32 +29,32 @@ export class LoginaportesService {
 */
   }
 
-  public isLogged : boolean = true;
+  /* public isLogged : boolean = true; */
 
 
   onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-     this.getCurrentUser();
+   return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+
   }
 
   onLoginFacebook() {
-    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+   return this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 
   onLoginTwitter() {
-    this.afAuth.auth.signInWithPopup(new auth.TwitterAuthProvider());
+    return this.afAuth.auth.signInWithPopup(new auth.TwitterAuthProvider());
   }
 
   onLogout() {
     this.usuario = {};
     this.afAuth.auth.signOut();
+    /* this.localStorage.clearStorage(); */
     this.router.navigate(['/loginaportes'])
   }
 
-  getCurrentUser(){
+/*   getCurrentUser(){
     this.isAuth().subscribe(auth => {
       if(auth){
-        this.isLogged=true;
         this.router.navigate(['/chat'])
 
       } else {
@@ -64,6 +65,6 @@ export class LoginaportesService {
 
   isAuth(){
       return this.afAuth.authState.pipe(map(auth => auth));
-  }
+  } */
 
 }

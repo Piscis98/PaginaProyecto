@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router} from '@angular/router';
+import { VerificacionLoginService } from '../../../servicios/verificacionLogin/verificacion-login.service';
 import { LoginadministradorService } from '../../../servicios/loginadministrador/loginadministrador.service';
 
 @Component({
@@ -13,13 +14,13 @@ export class PanelcontrolComponent implements OnInit {
   public usuario: any= {};
 
 
-  constructor(public loginadministradorSevice: LoginadministradorService) { }
+  constructor(public loginadministradorSevice: LoginadministradorService, public verificacionService: VerificacionLoginService) { }
 
-  public isLogged : boolean =this.loginadministradorSevice.isLogged;
+ /*  public isLogged : boolean =this.loginadministradorSevice.isLogged; */
 
   ngOnInit(): void {
 
-   //  this.loginadministradorSevice.getCurrentUser();
+   this.verificacionService.getCurrentUser("admin");
 
   }
 
