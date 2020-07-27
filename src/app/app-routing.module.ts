@@ -7,6 +7,7 @@ import { ChatComponent } from './componentes/aportes/componentes/chat/chat/chat.
 import { LoginComponent } from './componentes/aportes/componentes/login/login/login.component';
 import { LoginadministradorComponent } from './componentes/administrador/loginadministrador/loginadministrador.component';
 import { PanelcontrolComponent } from './componentes/administrador/panelcontrol/panelcontrol.component';
+import { PanelagregarpacienteComponent } from './componentes/administrador/panelagregarpaciente/panelagregarpaciente.component';
 import { Page404Component } from './componentes/paginaerror/page404/page404.component';
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'loginaportes', component: LoginComponent},
   {path: 'loginadministrador', component: LoginadministradorComponent},
   {path: 'panelcontrol', component: PanelcontrolComponent},
+  {path: 'panelagregarpaciente', component: PanelagregarpacienteComponent},
   {path: '**', component: Page404Component}
 ];
 

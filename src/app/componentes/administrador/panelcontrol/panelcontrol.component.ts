@@ -16,7 +16,7 @@ export class PanelcontrolComponent implements OnInit {
   public isAdmin : boolean = true;
 
 
-  constructor(public loginadministradorSevice: LoginadministradorService, public verificacionService: VerificacionLoginService) { }
+  constructor(public router: Router, public loginadministradorSevice: LoginadministradorService, public verificacionService: VerificacionLoginService) { }
 
  /*  public isLogged : boolean =this.loginadministradorSevice.isLogged; */
 

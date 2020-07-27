@@ -35,6 +35,7 @@ import { CausasComponent } from './componentes/informacion/causas/causas/causas.
 import { LoginComponent } from './componentes/aportes/componentes/login/login/login.component';
 import { LoginadministradorComponent } from './componentes/administrador/loginadministrador/loginadministrador.component';
 import { PanelcontrolComponent } from './componentes/administrador/panelcontrol/panelcontrol.component';
+import { PanelagregarpacienteComponent } from './componentes/administrador/panelagregarpaciente/panelagregarpaciente.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PanelcontrolComponent } from './componentes/administrador/panelcontrol/
     CausasComponent,
     LoginComponent,
     LoginadministradorComponent,
-    PanelcontrolComponent
+    PanelcontrolComponent,
+    PanelagregarpacienteComponent
   ],
   imports: [
     BrowserModule,
