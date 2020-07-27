@@ -1,0 +1,40 @@
+
+.content{
+  overflow: hidden;
+  height: 72vh;
+  padding-bottom: 0rem;
+  padding-top: 0px;
+  background-color: turquoise;
+}
+
+.container{
+  margin: 80px 0px 0px 300px;
+}
+.panel-primary{
+  background-color: blue;
+}
+
+.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+
+.panel-body{
+  background-color: white;
+  padding-top: 7px;
+ /*  padding-left: 0.5px;
+  padding-right: 0.5px; */
+}
+
+
+  .row .row{
+
+    padding-left: 25px;
+
+  }
+
+.row .row a{
+
+  width: 225px;
+  text-align: center;
+
+}
+
+

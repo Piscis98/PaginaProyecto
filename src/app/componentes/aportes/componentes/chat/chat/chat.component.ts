@@ -34,8 +34,9 @@ export class ChatComponent implements OnInit {
   public isLogged : boolean =this.loginaportesSevice.isLogged;
 
   ngOnInit(): void {
-    this.loginaportesSevice.getCurrentUser();
+    //this.loginaportesSevice.getCurrentUser();
   }
+
 
   enviar_mensaje(){
 
@@ -48,6 +49,10 @@ export class ChatComponent implements OnInit {
     .then(() => this.mensaje="")
     .catch((err)=> console.error('Error al enviar: ', err));
 
+  }
+
+  onLogout() {
+    this.loginaportesSevice.onLogout();
   }
 
 

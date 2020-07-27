@@ -33,6 +33,8 @@ import { from } from 'rxjs';
 import { ConceptoComponent } from './componentes/informacion/concepto/concepto/concepto.component';
 import { CausasComponent } from './componentes/informacion/causas/causas/causas.component';
 import { LoginComponent } from './componentes/aportes/componentes/login/login/login.component';
+import { LoginadministradorComponent } from './componentes/administrador/loginadministrador/loginadministrador.component';
+import { PanelcontrolComponent } from './componentes/administrador/panelcontrol/panelcontrol.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { LoginComponent } from './componentes/aportes/componentes/login/login/lo
     ChatComponent,
     ConceptoComponent,
     CausasComponent,
-    LoginComponent
+    LoginComponent,
+    LoginadministradorComponent,
+    PanelcontrolComponent
   ],
   imports: [
     BrowserModule,

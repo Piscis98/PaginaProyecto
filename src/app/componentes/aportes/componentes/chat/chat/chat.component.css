@@ -27,6 +27,7 @@ header, h2{
 
   }
   .container{
+      width: 98%;
       height: 50vh;
       margin-top: 0rem;
       margin-bottom: 0rem;

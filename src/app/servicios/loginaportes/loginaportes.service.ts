@@ -28,12 +28,12 @@ export class LoginaportesService {
 */
   }
 
-  public isLogged : boolean = false;
+  public isLogged : boolean = true;
 
 
   onLoginGoogle() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-    this.getCurrentUser();
+     this.getCurrentUser();
   }
 
   onLoginFacebook() {
@@ -45,7 +45,9 @@ export class LoginaportesService {
   }
 
   onLogout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
+    this.router.navigate(['/loginaportes'])
   }
 
   getCurrentUser(){
@@ -55,7 +57,6 @@ export class LoginaportesService {
         this.router.navigate(['/chat'])
 
       } else {
-        this.isLogged=false;
         this.router.navigate(['/loginaportes'])
       }
     });

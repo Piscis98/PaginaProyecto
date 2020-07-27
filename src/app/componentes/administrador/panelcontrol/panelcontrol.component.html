@@ -1,0 +1,35 @@
+
+<div class="content">
+
+ <div class="container" *ngIf="isLogged">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <ion-icon name="grid-outline" class="mr-2 lead"></ion-icon><b>Panel de opciones</b></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                          <a href="#" class="btn btn-warning btn-lg" role="button"> <ion-icon name="add-outline" class="mr-2 lead"></ion-icon> <br/>Agregar paciente</a>
+                          <a href="#" class="btn btn-danger btn-lg" role="button"> <ion-icon name="refresh-outline" class="mr-2 lead"></ion-icon><br/>Actualizar paciente</a>
+                          <a href="#" class="btn btn-danger btn-lg" role="button"> <ion-icon name="close-outline" class="mr-2 lead"></ion-icon><br/>Borrar comentario</a>
+                          <a href="#" class="btn btn-warning btn-lg" role="button"> <ion-icon name="add-outline" class="mr-2 lead"></ion-icon><br/>Agregar noticia</a>
+                        </div>
+                        <!--   <div class="col-xs-6 col-md-6">
+                            <a href="#" class="btn btn-success btn-lg" role="button"> <ion-icon name="grid-outline" class="mr-2 lead"></ion-icon><br/>Users</a>
+                            <a href="#" class="btn btn-info btn-lg" role="button"> <ion-icon name="grid-outline" class="mr-2 lead"></ion-icon><br/>Notes</a>
+                            <a href="#" class="btn btn-primary btn-lg" role="button"> <ion-icon name="grid-outline" class="mr-2 lead"></ion-icon><br/>Photos</a>
+                            <a href="#" class="btn btn-primary btn-lg" role="button"> <ion-icon name="grid-outline" class="mr-2 lead"></ion-icon><br/>Tags</a>
+                          </div> -->
+                    </div>
+                    <button type="button"  class="btn btn-info btn-md btn-icon btn-block text-center" (click)="onLogout()">
+                      <span><ion-icon name="arrow-back-outline" class="mr-2 lead"></ion-icon></span>Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

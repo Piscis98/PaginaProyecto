@@ -1,5 +1,14 @@
 <div class="content">
-    <div class="container py-5 px-4" *ngIf="isLogged">
+
+  <div class="colo-md-12 text-right">
+
+    <button type="button" class="btn btn-outline-danger" (click)="onLogout()">
+      Cerrar sesión
+    </button>
+
+  </div>
+
+    <div class="container py-1" *ngIf="isLogged">
 
         <!-- For demo purpose-->
         <header class="text-center">
@@ -165,7 +174,7 @@
                 type="text" name="mensaje" [(ngModel)]="mensaje"
                 placeholder="Escribe un mensaje" aria-describedby="button-addon2"
                 class="form-control rounded-0 border-0 py-4 bg-light input-lg"
-                (keyup.enter)="enviar_mensaje()"
+
                 >
 
                 <div class="input-group-append">

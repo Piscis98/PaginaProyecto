@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
 
   ingresar(proveedor: string){
     this.loginAportesService.onLoginGoogle();
+
   }
 
 }
