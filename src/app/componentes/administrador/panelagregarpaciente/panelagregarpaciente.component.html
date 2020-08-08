@@ -2,49 +2,441 @@
 <div class="content">
 
 <div class="card-body">
-  <form>
+
+
+
+  <form [formGroup]="pacientForm" (ngSubmit)="guardarPaciente()">
+
     <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+      <div class="form-group col-md-12">
+       <h2>Ingresa los datos del paciente</h2>
       </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Fecha de diagnóstico</label>
-        <input type="date" class="form-control" id="inputPassword4">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
+
+
+        <div class="form-group col-md-3">
+        <label for="inputState">Tipo de sangre</label>
+        <select id="inputState" formControlName="tiposangre" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+
+
         </select>
       </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Estado paciente</label>
+        <select id="inputState" formControlName="estado_paciente" class="form-control">
+          <option selected>Elije una opción</option>
+          <optgroup label="Fase 1">
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+          </optgroup>
+          <optgroup label="Fase 2">
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+          </optgroup>
+          <optgroup label="Fase 3">
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+          </optgroup>
+        </select>
       </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Nacionalidad</label>
+        <input type="text" formControlName="nacionalidad_paciente" class="form-control" id="inputPassword4" name="nacionalidad" list="paises">
+        <datalist id="paises">
+
+      <!-- Paises de Norte America -->
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+       <!-- Paises de Centro America -->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+       <!-- Paises de Sur America -->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+        <!-- Paises de Europa-->
+
+         <!-- Paises de Asia -->
+
+
+       <!-- Paises de África-->
+
+        </datalist>
+
+
+        <div class="alert-dander" *ngIf="nacionalidad_paciente.invalid && (nacionalidad_paciente.dirty || nacionalidad_paciente.touched)">
+          <div class="container-error-message" *ngIf="nacionalidad_paciente.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="nacionalidad_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message" *ngIf="nacionalidad_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 20</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Departamento Caso</label>
+        <input type="text" formControlName="departamento_caso" class="form-control" id="inputPassword4" name="Departamento" list="departamento">
+        <datalist id="departamento">
+
+      <!-- Dptos de la región Insular-->
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+        <!-- Dptos de la región Andina-->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+       <!-- Dptos de la región Amazonas-->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+        <!-- Dptos de la región Orinoquía-->
+
+         <!-- Dptos de la región Pacífico-->
+
+
+        <!-- Dptos de la región Atlántico-->
+
+        </datalist>
+
+        <div class="alert-dander" *ngIf="departamento_caso.invalid && (departamento_caso.dirty || departamento_caso.touched)">
+          <div class="container-error-message" *ngIf="departamento_caso.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="departamento_caso.errors.minlength">
+            <p>El mínimo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message" *ngIf="departamento_caso.errors.maxlength">
+            <p>El máximo de caracteres es 20</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Ciudad Caso</label>
+        <input type="text" formControlName="municipio_caso" class="form-control" id="inputPassword4" name="Ciudad" list="ciudad">
+        <datalist id="ciudad">
+
+      <!-- Ciudades de la región Insular-->
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+        <!-- Ciudades de la región Andina-->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+       <!-- Ciudades de la región Amazonas-->
+
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+        <!-- Ciudades de la región Orinoquía-->
+
+         <!-- Ciudades de la región Pacífico-->
+
+
+        <!--Ciudades de la región Atlántico-->
+
+        </datalist>
+
+        <div class="alert-dander" *ngIf="municipio_caso.invalid && (municipio_caso.dirty || municipio_caso.touched)">
+          <div class="container-error-message" *ngIf="municipio_caso.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="municipio_caso.errors.minlength">
+            <p>El mínimo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message" *ngIf="municipio_caso.errors.maxlength">
+            <p>El máximo de caracteres es 20</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Fecha de diagnóstico</label>
+        <input type="date" formControlName="fecha_notificacion" class="form-control" id="inputPassword4">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Fecha del último diagnóstico</label>
+        <input type="date" formControlName="fecha_ultimo_diagnostico" class="form-control" id="inputPassword4">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Género</label>
+        <select id="inputState" formControlName="genero_paciente" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Masculino</option>
+            <option>Femenino</option>
+
+
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Nombres</label>
+        <input type="text" formControlName="nombres_paciente" class="form-control" id="inputPassword4" placeholder="Nombres">
+
+        <div class="alert-dander" *ngIf="nombres_paciente.invalid && (nombres_paciente.dirty || nombres_paciente.touched)">
+          <div class="container-error-message" *ngIf="nombres_paciente.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="nombres_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 2</p>
+          </div>
+          <div class="container-error-message" *ngIf="nombres_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 30</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Apellidos</label>
+        <input type="text" formControlName="apellidos_paciente" class="form-control" id="inputPassword4" placeholder="Apellidos">
+
+        <div class="alert-dander" *ngIf="apellidos_paciente.invalid && (apellidos_paciente.dirty || apellidos_paciente.touched)">
+          <div class="container-error-message" *ngIf="apellidos_paciente.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="apellidos_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 2</p>
+          </div>
+          <div class="container-error-message" *ngIf="apellidos_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 30</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Edad</label>
+        <input type="text" formControlName="edad_paciente" class="form-control" id="inputPassword4" placeholder="Edad">
+        <div class="alert-dander"
+        *ngIf="edad_paciente.invalid && (edad_paciente.dirty || edad_paciente.touched)">
+          <div class="container-error-message" *ngIf="edad_paciente.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="edad_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 1</p>
+          </div>
+          <div class="container-error-message" *ngIf="edad_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message"
+           *ngIf="edad_paciente.invalid && edad_paciente.errors.pattern && (edad_paciente.dirty || edad_paciente.touched)">
+            <p>Este campo es numérico</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Tipo de Contagio</label>
+        <select id="inputState" formControlName="tipo_contagio" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+
+
+        </select>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Tipo de Documento</label>
+        <select id="inputState" formControlName="tipo_documento_identidad" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+
+
+        </select>
+      </div>
+
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Numero documento</label>
+        <input type="text" formControlName="documento_identidad" class="form-control" id="inputPassword4" placeholder="Sin comas ni puntos">
+        <div class="alert-dander"
+        *ngIf="documento_identidad.invalid && (documento_identidad.dirty || documento_identidad.touched)">
+          <div class="container-error-message" *ngIf="documento_identidad.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="documento_identidad.errors.minlength">
+            <p>El mínimo de caracteres es 6</p>
+          </div>
+          <div class="container-error-message" *ngIf="edad_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 10</p>
+          </div>
+          <div class="container-error-message"
+           *ngIf="documento_identidad.invalid && documento_identidad.errors.pattern && (documento_identidad.dirty || documento_identidad.touched)">
+            <p>Este campo NO acepta espacios, ni caracteres especiales</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Pertenencia étnica</label>
+        <select id="inputState" formControlName="pertenencia_etnica" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+        </select>
+      </div>
+
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Nombre grupo étnico</label>
+        <input type="text" formControlName="nombre_grupo_etnico" class="form-control" id="inputPassword4" placeholder="Opcional">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputState">Lugar trato caso</label>
+        <select id="inputState" formControlName="lugar_trato_caso" class="form-control">
+          <option selected>Elije una opción</option>
+
+            <option>Estado 1</option>
+            <option>Estado 2</option>
+            <option>Estado 3</option>
+
+
+        </select>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Nombre del lugar de recuperación</label>
+        <input type="text" formControlName="nombre_lugar_trato_caso" class="form-control" id="inputPassword4" placeholder="Opcional">
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Dirección de residencia</label>
+        <input type="text" formControlName="direccion_residencia_paciente" class="form-control" id="inputPassword4" placeholder="Opcional">
+        <div class="alert-dander"
+        *ngIf="direccion_residencia_paciente.invalid && (direccion_residencia_paciente.dirty || direccion_residencia_paciente.touched)">
+          <div class="container-error-message" *ngIf="direccion_residencia_paciente.errors.required">
+            <p>Este campo es requerido</p>
+          </div>
+          <div class="container-error-message" *ngIf="direccion_residencia_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 6</p>
+          </div>
+          <div class="container-error-message" *ngIf="direccion_residencia_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 40</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Correo</label>
+        <input type="text" formControlName="correo_contacto_paciente" class="form-control" id="inputPassword4" placeholder="Opcional">
+        <div class="alert-dander"
+        *ngIf="correo_contacto_paciente.invalid && (correo_contacto_paciente.dirty || correo_contacto_paciente.touched)">
+
+          <div class="container-error-message" *ngIf="correo_contacto_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 6</p>
+          </div>
+          <div class="container-error-message" *ngIf="correo_contacto_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 30</p>
+          </div>
+          <div class="container-error-message"
+           *ngIf="correo_contacto_paciente.invalid && correo_contacto_paciente.errors.pattern && (correo_contacto_paciente.dirty || correo_contacto_paciente.touched)">
+            <p>El correo debe ser válido</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Teléfono</label>
+        <input type="text" formControlName="telefono_paciente" class="form-control" id="inputPassword4" placeholder="Opcional">
+        <div class="alert-dander"
+        *ngIf="telefono_paciente.invalid && (telefono_paciente.dirty || telefono_paciente.touched)">
+
+          <div class="container-error-message" *ngIf="telefono_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message" *ngIf="telefono_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 20</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label for="inputPassword4">Celular</label>
+        <input type="text" formControlName="celular_paciente" class="form-control" id="inputPassword4" placeholder="Opcional">
+
+        <div class="alert-dander"
+        *ngIf="celular_paciente.invalid && (celular_paciente.dirty || celular_paciente.touched)">
+
+          <div class="container-error-message" *ngIf="celular_paciente.errors.minlength">
+            <p>El mínimo de caracteres es 3</p>
+          </div>
+          <div class="container-error-message" *ngIf="celular_paciente.errors.maxlength">
+            <p>El máximo de caracteres es 20</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   <!--   <div class="form-group">
       <div class="form-check">
@@ -55,9 +447,16 @@
       </div>
     </div> -->
     <div class="btns">
-    <a routerLink="/panelcontrol" role="button" class="btn btn-warning atras">Atrás</a>
-    <button type="submit" class="btn btn-primary agregar">Agregar Paciente</button>
+    <a routerLink="/panelcontrol" role="button" class="btn btn-warning atras">
+      <ion-icon name="arrow-back-circle-outline"></ion-icon>Atrás</a>
+    <button type="submit" class="btn btn-primary agregar" [disabled]="!pacientForm.valid">
+      <ion-icon name="add-circle-outline"></ion-icon>Agregar Paciente</button>
     </div>
+
+
+        <input type="hidden" formControlName="numero_caso_paciente" class="form-control" id="inputPassword4">
+
+
   </form>
 </div>
 

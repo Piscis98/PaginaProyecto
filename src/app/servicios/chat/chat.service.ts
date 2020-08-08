@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
-import {Mensaje} from '../../interfaces/mensaje/mensaje.interface';
+import {Mensaje} from '../../modelos/mensaje/mensaje.interface';
 
 // import {} from '../../modelos/mensaje/mensaje';
 

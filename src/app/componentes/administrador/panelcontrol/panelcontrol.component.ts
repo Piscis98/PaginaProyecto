@@ -22,7 +22,7 @@ export class PanelcontrolComponent implements OnInit {
 
   ngOnInit(): void {
 
-   this.verificacionService.getCurrentUser("admin");
+   /*  this.verificacionService.getCurrentUser("admin"); */
 
   }
 

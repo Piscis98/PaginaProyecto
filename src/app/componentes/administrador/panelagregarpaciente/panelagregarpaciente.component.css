@@ -15,6 +15,16 @@
 
 }
 
+h2{
+  background: #43d1af;
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin: -5px -5px 5px -5px;
+}
+
 .btns{
   padding-bottom: 5px;
   padding-top: 20px;
@@ -24,5 +34,23 @@
 
   margin-left: 370px;
 
+}
+
+.agregar:hover:not([disabled]) {
+  background: blue;
+}
+.atras:hover{
+  background: yellow;
+}
+
+.alert-dander{
+  color: #721c24;
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  margin: 5px;
+}
+
+.container-error-message{
+  padding: 3px;
 }
 

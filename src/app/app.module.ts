@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms'
 
 //FIREBASE
 import{ AngularFireModule } from 'angularfire2';
@@ -20,6 +21,11 @@ import { NgxSpinnerModule } from 'ngx-spinner'
 
 //SERVICIOS
 import { ChatService } from './servicios/chat/chat.service';
+import { LocalstorageService } from './servicios/localstorage/localstorage.service';
+import { LoginadministradorService } from './servicios/loginadministrador/loginadministrador.service';
+import { LoginaportesService } from './servicios/loginaportes/loginaportes.service';
+import { VerificacionLoginService } from './servicios/verificacionLogin/verificacion-login.service';
+import { PacienteService } from './servicios/paciente/paciente.service';
 
 //COMPONENTES
 import { AppComponent } from './app.component';
@@ -61,9 +67,15 @@ import { PanelagregarpacienteComponent } from './componentes/administrador/panel
     AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ChatService,
+    LocalstorageService,
+    LoginadministradorService,
+    LoginaportesService,
+    VerificacionLoginService,
+    PacienteService,
     {provide: ErrorHandler},
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

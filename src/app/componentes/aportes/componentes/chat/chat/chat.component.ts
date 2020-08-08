@@ -4,7 +4,7 @@ import { ChatService } from '../../../../../servicios/chat/chat.service';
 import { LoginaportesService } from '../../../../../servicios/loginaportes/loginaportes.service';
 import { VerificacionLoginService } from '../../../../../servicios/verificacionLogin/verificacion-login.service';
 
-import {Mensaje} from '../../../../../interfaces/mensaje/mensaje.interface';
+import {Mensaje} from '../../../../../modelos/mensaje/mensaje.interface';
 
 
 

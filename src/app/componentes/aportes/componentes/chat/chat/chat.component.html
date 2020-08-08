@@ -167,7 +167,7 @@
           </div>
 
             <!-- Typing area -->
-            <form action="#" class="bg-light">
+            <form action="#" class="bg-light" (submit)="enviar_mensaje()">
               <div class="input-group textarea">
 
                 <input
@@ -178,7 +178,7 @@
                 >
 
                 <div class="input-group-append">
-                  <button id="button-addon2" (click)="enviar_mensaje()" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
+                  <button id="button-addon2" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
                 </div>
               </div>
             </form>
